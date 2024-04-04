@@ -2,6 +2,7 @@ package com.coffee.lovers.usuarios.domain.service;
 
 import com.coffee.lovers.repository.GenericRepository;
 import com.coffee.lovers.service.AbstractGenericServiceImpl;
+import com.coffee.lovers.usuarios.domain.model.Module;
 import com.coffee.lovers.usuarios.domain.repository.ModuleRepository;
 
 public class ModuleService extends AbstractGenericServiceImpl<Module> {

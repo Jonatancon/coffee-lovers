@@ -20,7 +20,7 @@ public class UserEntity implements Serializable {
     private String lastNames;
     private String email;
     private String password;
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE})
     @JoinColumn(name = "id_address", referencedColumnName = "id")
     private List<AddressEntity> address;
     private String phone;

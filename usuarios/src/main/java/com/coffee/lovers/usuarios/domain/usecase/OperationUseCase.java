@@ -1,28 +1,36 @@
 package com.coffee.lovers.usuarios.domain.usecase;
 
+import com.coffee.lovers.usuarios.domain.api.OperationPort;
 import com.coffee.lovers.usuarios.domain.model.Operation;
 import com.coffee.lovers.usuarios.domain.repository.OperationRepository;
+import com.coffee.lovers.usuarios.domain.service.OperationService;
 
 import java.util.Optional;
 
-public class OperationUseCase implements OperationRepository {
-    @Override
-    public Optional<Operation> save(Operation operation) {
-        return Optional.empty();
+public class OperationUseCase implements OperationPort {
+    private final OperationService service;
+
+    public OperationUseCase(OperationService service) {
+        this.service = service;
     }
 
     @Override
-    public Optional<Operation> update(Operation operation) {
-        return Optional.empty();
+    public Operation save(Operation operation) {
+        return null;
     }
 
     @Override
-    public boolean delete(String key) {
-        return false;
+    public Operation update(Operation operation) {
+        return null;
     }
 
     @Override
-    public Optional<Operation> get(String key) {
-        return Optional.empty();
+    public void delete(String key) {
+
+    }
+
+    @Override
+    public Operation get(String key) {
+        return null;
     }
 }

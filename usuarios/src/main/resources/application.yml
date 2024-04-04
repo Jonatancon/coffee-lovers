@@ -1,0 +1,22 @@
+server:
+  servlet:
+    context-path: /user
+  port: ${PORT}
+
+spring:
+  application:
+    name: usuarios
+  profiles:
+    active: ${PROFILE}
+  messages:
+    basename: messages
+    encoding: utf-8
+
+eureka:
+  instance:
+    instance-id: "${spring.application.name}:${random.value}"
+  client:
+    service-url:
+      defaultZone:${URL_EUREKA}
+
+#http://localhost:8761/eureka/

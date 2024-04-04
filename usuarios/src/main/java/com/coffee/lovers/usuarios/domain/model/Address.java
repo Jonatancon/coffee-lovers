@@ -1,5 +1,7 @@
 package com.coffee.lovers.usuarios.domain.model;
 public class Address {
+
+    private Integer id;
     private String country;
     private String department;
     private String municipality;
@@ -7,12 +9,22 @@ public class Address {
     private boolean defaultAddress;
 
     public Address(){}
-    public Address(String country, String department, String municipality, String nomenclature, boolean defaultAddress) {
+
+    public Address(Integer id, String country, String department, String municipality, String nomenclature, boolean defaultAddress) {
+        this.id = id;
         this.country = country;
         this.department = department;
         this.municipality = municipality;
         this.nomenclature = nomenclature;
         this.defaultAddress = defaultAddress;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getCountry() {
