@@ -5,9 +5,10 @@ import com.coffee.lovers.usuarios.adapters.persistence.entity.UserEntity;
 import com.coffee.lovers.usuarios.domain.model.User;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.MappingConstants;
 import org.mapstruct.Mappings;
 
-@Mapper(componentModel = "spring", uses = {ImageMapper.class})
+@Mapper(componentModel = MappingConstants.ComponentModel.SPRING, uses = {ImageMapper.class})
 public interface UserMapper {
     @Mappings({
             @Mapping(target = "imageUser.id", source = "image.id"),
