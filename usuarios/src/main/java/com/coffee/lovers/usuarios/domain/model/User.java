@@ -3,29 +3,37 @@ package com.coffee.lovers.usuarios.domain.model;
 import java.util.List;
 
 public class User {
+    private Integer id;
     private String identification;
     private String names;
     private String lastNames;
     private String email;
     private String password;
-    private List<Address> address;
-    private String phone;
-    private Image image;
-    private List<Rol> roles;
+    private String addressId;
+    private String phoneId;
+    private ImageUser imageUser;
+    private String roles;
 
-    public User(){}
-
-    public User(String identification, String names, String lastNames, String email, String password,
-                List<Address> address, String phone, Image image, List<Rol> roles) {
+    public User(Integer id, String identification, String names, String lastNames, String email, String password,
+                String addressId, String phoneId, ImageUser imageUser, String roles) {
+        this.id = id;
         this.identification = identification;
         this.names = names;
         this.lastNames = lastNames;
         this.email = email;
         this.password = password;
-        this.address = address;
-        this.phone = phone;
-        this.image = image;
+        this.addressId = addressId;
+        this.phoneId = phoneId;
+        this.imageUser = imageUser;
         this.roles = roles;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getIdentification() {
@@ -68,35 +76,35 @@ public class User {
         this.password = password;
     }
 
-    public List<Address> getAddress() {
-        return address;
+    public String getAddressId() {
+        return addressId;
     }
 
-    public void setAddress(List<Address> address) {
-        this.address = address;
+    public void setAddressId(String addressId) {
+        this.addressId = addressId;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getPhoneId() {
+        return phoneId;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setPhoneId(String phoneId) {
+        this.phoneId = phoneId;
     }
 
-    public Image getImages() {
-        return image;
+    public ImageUser getImageUser() {
+        return imageUser;
     }
 
-    public void setImages(Image image) {
-        this.image = image;
+    public void setImageUser(ImageUser imageUser) {
+        this.imageUser = imageUser;
     }
 
-    public List<Rol> getRoles() {
+    public String getRoles() {
         return roles;
     }
 
-    public void setRoles(List<Rol> roles) {
+    public void setRoles(String roles) {
         this.roles = roles;
     }
 }

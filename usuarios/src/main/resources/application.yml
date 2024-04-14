@@ -1,15 +1,15 @@
 server:
   servlet:
-    context-path: /user
-  port: ${PORT}
+    context-path: /user-api
+  port: 0 #${PORT}
 
 spring:
   application:
     name: usuarios
   profiles:
-    active: ${PROFILE}
+    active: dev #${PROFILE}
   messages:
-    basename: messages
+    basename: messages, messages-error
     encoding: utf-8
 
 eureka:
@@ -17,6 +17,5 @@ eureka:
     instance-id: "${spring.application.name}:${random.value}"
   client:
     service-url:
-      defaultZone:${URL_EUREKA}
+      defaultZone: http://localhost:8761/eureka/ #${URL_EUREKA}
 
-#http://localhost:8761/eureka/

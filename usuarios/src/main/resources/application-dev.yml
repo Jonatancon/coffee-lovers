@@ -1,8 +1,11 @@
 spring:
   datasource:
-    username: ${USER_NAME}
+    username: root #${USER_NAME}
     hikari:
-      maximum-pool-size: ${spring.datasource.hikari.maximum-pool-size}
-      connection-timeout: ${spring.datasource.hikari.connection-timeout}
-    url: ${URL}
-    password: ${PASSWORD}
+      maximum-pool-size: 5 #"${spring.datasource.hikari.maximum-pool-size}"
+      connection-timeout: 20000 #"${spring.datasource.hikari.connection-timeout}"
+    url: jdbc:mysql://localhost:3306/user-db #${URL_DB_USER}
+    password: admin #${PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update

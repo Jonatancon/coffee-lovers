@@ -6,6 +6,6 @@ import java.util.stream.Stream;
 public interface GenericRepository <T>{
     Optional<T> save(T t);
     Optional<T> update(T t);
-    boolean delete(String key);
+    void delete(String key);
     Optional<T> get(String key);
 }

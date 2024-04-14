@@ -1,14 +1,21 @@
 package com.coffee.lovers.usuarios.application.configuration;
 
-import com.coffee.lovers.usuarios.infraestructure.message.Messages;
+import com.coffee.lovers.usuarios.adapters.message.MessagesError;
+import com.coffee.lovers.usuarios.adapters.message.MessagesOk;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@RequiredArgsConstructor
 public class MessageConfiguration {
     @Bean
-    public Messages getMessage(MessageSource messageSource) {
-        return new Messages(messageSource);
+    public MessagesOk getMessageOk(MessageSource messageSource) {
+        return new MessagesOk(messageSource);
+    }
+    @Bean
+    public MessagesError getMessageError(MessageSource messageSource) {
+        return new MessagesError(messageSource);
     }
 }

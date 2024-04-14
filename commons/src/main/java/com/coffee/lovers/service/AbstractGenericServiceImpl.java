@@ -1,9 +1,12 @@
 package com.coffee.lovers.service;
 
+import com.coffee.lovers.model.Constants;
+import com.coffee.lovers.model.exception.Conflict;
+import com.coffee.lovers.model.exception.NotFound;
 import com.coffee.lovers.repository.GenericRepository;
 
+import java.util.Objects;
 import java.util.Optional;
-import java.util.stream.Stream;
 
 public abstract class AbstractGenericServiceImpl <T> implements GenericService<T> {
 
@@ -11,22 +14,28 @@ public abstract class AbstractGenericServiceImpl <T> implements GenericService<T
 
 
     @Override
-    public Optional<T> save(T t) {
-        return getRepository().save(t);
+    public T save(T t) {
+        return getRepository()
+                .save(t)
+                .orElseThrow(() -> new Conflict(Constants.ERROR_CREATE_ELEMENT.getMessage()));
     }
 
     @Override
-    public Optional<T> update(T t) {
-        return getRepository().update(t);
+    public T update(T t) {
+        return getRepository()
+                .update(t)
+                .orElseThrow(() -> new Conflict(Constants.ERROR_CREATE_ELEMENT.getMessage()));
     }
 
     @Override
-    public boolean delete(String key) {
-        return getRepository().delete(key);
+    public void delete(String key) {
+        getRepository().delete(key);
     }
 
     @Override
-    public Optional<T> get(String key) {
-        return getRepository().get(key);
+    public T get(String key) {
+        return getRepository()
+                .get(key)
+                .orElseThrow(() -> new NotFound(Constants.NOT_FOUND_ELEMENT.getMessage() + key));
     }
 }
