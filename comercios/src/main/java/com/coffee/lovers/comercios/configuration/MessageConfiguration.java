@@ -1,11 +1,10 @@
 package com.coffee.lovers.comercios.configuration;
 
-import com.coffee.lovers.usuarios.adapters.message.MessagesError;
-import com.coffee.lovers.usuarios.adapters.message.MessagesOk;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import com.coffee.lovers.comercios.adapters.message.*;
 
 @Configuration
 @RequiredArgsConstructor
