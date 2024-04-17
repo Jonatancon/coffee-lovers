@@ -10,6 +10,7 @@
         </processorPath>
         <module name="coffee-lovers.empleados.main" />
         <module name="coffee-lovers.usuarios.main" />
+        <module name="coffee-lovers.comercios.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />

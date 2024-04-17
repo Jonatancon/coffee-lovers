@@ -1,6 +1,5 @@
 package com.coffee.lovers.usuarios.application.configuration;
 
-import com.coffee.lovers.usuarios.domain.persistence.UserPersistencePort;
 import com.coffee.lovers.usuarios.domain.service.UserService;
 import com.coffee.lovers.usuarios.domain.usecase.UserUseCase;
 import lombok.RequiredArgsConstructor;

@@ -1,3 +1,3 @@
 rootProject.name = 'coffee-lovers'
-include 'commons', 'usuarios', 'empleados'
+include 'commons', 'usuarios', 'empleados', 'comercios'
 

@@ -28,6 +28,5 @@ public class UserService extends AbstractGenericServiceImpl<User> {
                .map(user1 -> getRepository().update(user)
                        .orElseThrow(() -> new Conflict(messagesError.getError())))
                .orElseThrow(() -> new NotFound(messagesError.getNotFound()));
-
     }
 }
