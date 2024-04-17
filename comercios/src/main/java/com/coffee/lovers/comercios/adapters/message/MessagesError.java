@@ -1,13 +1,13 @@
 package com.coffee.lovers.comercios.adapters.message;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 import java.util.Locale;
 
 @Component
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class MessagesError {
     private final MessageSource messageSource;
 
