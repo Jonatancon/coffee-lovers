@@ -1,0 +1,17 @@
+server:
+  port: 4040 #${PORT}
+
+spring:
+  application:
+    name: gatway
+  profiles:
+    active: dev #${PROFILE}
+  messages:
+    basename: messages, messages-error
+    encoding: utf-8
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/ #${URL_EUREKA}
+    fetch-registry: true
