@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/commons" />
             <option value="$PROJECT_DIR$/empleados" />
             <option value="$PROJECT_DIR$/gatway" />
+            <option value="$PROJECT_DIR$/product" />
             <option value="$PROJECT_DIR$/registry-server" />
             <option value="$PROJECT_DIR$/usuarios" />
           </set>
